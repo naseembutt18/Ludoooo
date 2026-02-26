@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ludo Board Clean Design</title>
+    <style>
+        /* CSS yahan start ho rahi hai */
+        body { display: flex; justify-content: center; align-items: center; height: 100vh; background: #f0f0f0; margin: 0; }
+        .ludo-board { width: 450px; height: 450px; display: grid; grid-template-columns: 180px 90px 180px; grid-template-rows: 180px 90px 180px; background: white; border: 4px solid #333; }
+        .home { display: flex; justify-content: center; align-items: center; border: 1px solid #333; }
+        .red { background: #ff4d4d; } .green { background: #2ecc71; } .blue { background: #3498db; } .yellow { background: #f1c40f; }
+        .box { width: 110px; height: 110px; background: white; border-radius: 10px; display: grid; grid-template-columns: 1fr 1fr; padding: 10px; gap: 10px; }
+        .dot { background: #ccc; border-radius: 50%; border: 1px solid #999; }
+        .path { display: grid; background: #fff; }
+        .top-path, .bottom-path { grid-template-columns: repeat(3, 1fr); grid-template-rows: repeat(6, 1fr); }
+        .left-path, .right-path { grid-template-columns: repeat(6, 1fr); grid-template-rows: repeat(3, 1fr); }
+        .cell { border: 1px solid #ddd; }
+        .center-finish { background: #eee; display: flex; justify-content: center; align-items: center; font-weight: bold; font-family: Arial; border: 1px solid #333; }
+    </style>
+</head>
+<body>
+
+    <div class="ludo-board">
+        <!-- Top Row -->
+        <div class="home red"><div class="box"><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div></div></div>
+        <div class="path top-path">
+            <!-- 18 Plain Cells -->
+            <div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div>
+        </div>
+        <div class="home green"><div class="box"><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div></div></div>
+
+        <!-- Middle Row -->
+        <div class="path left-path">
+            <div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div>
+        </div>
+        <div class="center-finish">FINISH</div>
+        <div class="path right-path">
+            <div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div>
+        </div>
+
+        <!-- Bottom Row -->
+        <div class="home blue"><div class="box"><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div></div></div>
+        <div class="path bottom-path">
+            <div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div>
+        </div>
+        <div class="home yellow"><div class="box"><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div></div></div>
+    </div>
+
+</body>
+</html>
